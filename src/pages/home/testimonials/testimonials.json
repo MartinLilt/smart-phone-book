@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "user": "John M.",
+    "job": "UX designer",
+    "comment": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam aliquid expedita recusandae distinctio maxime dolor, eligendi commodi qui animi in quas harum! Ipsum minus cupiditate eius dolorem eaque neque fugiat."
+  },
+  {
+    "id": 1,
+    "user": "John M.",
+    "job": "Graphic designer",
+    "comment": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam aliquid expedita recusandae distinctio maxime dolor, eligendi commodi qui animi in quas harum! Ipsum minus cupiditate eius dolorem eaque neque fugiat."
+  },
+  {
+    "id": 1,
+    "user": "John M.",
+    "job": "Target Marketing",
+    "comment": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam aliquid expedita recusandae distinctio maxime dolor, eligendi commodi qui animi in quas harum! Ipsum minus cupiditate eius dolorem eaque neque fugiat."
+  },
+  {
+    "id": 1,
+    "user": "John M.",
+    "job": "UX designer",
+    "comment": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam aliquid expedita recusandae distinctio maxime dolor, eligendi commodi qui animi in quas harum! Ipsum minus cupiditate eius dolorem eaque neque fugiat."
+  }
+]

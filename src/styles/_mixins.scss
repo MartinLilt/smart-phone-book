@@ -1,0 +1,126 @@
+@mixin default(
+  //   This is default styles
+  $border: 0,
+  $background: none,
+  $list: none,
+  $padding: 0,
+  $margin: 0,
+  $cursor: none
+) {
+  border: $border;
+  background: $background;
+  list-style: $list;
+  padding: $padding;
+  margin: $margin;
+  cursor: $cursor;
+}
+
+@mixin typography(
+  //   This is default styles
+  $color: var(--main-opacity-color),
+  $weight: 400,
+  $size: 1rem,
+  $height: 1.5,
+  $spacing: 0
+) {
+  color: $color;
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+}
+
+@mixin button(
+  //   This is default styles
+  $border: 0,
+  $background: none,
+  $list: none,
+  $padding: 0,
+  $margin: 0,
+  $cursor: none,
+  $color: var(--main-opacity-color),
+  $weight: 400,
+  $size: 1rem,
+  $height: 1.5,
+  $spacing: 0,
+  $radius: 0,
+  $filter: none
+) {
+  @include default($border, $background, $list, $padding, $margin, $cursor);
+  @include typography($color, $weight, $size, $height, $spacing);
+  border-radius: $radius;
+  filter: $filter;
+}
+
+@mixin text(
+  //   This is default styles
+  $color: var(--text-color),
+  $font: var(--font-family),
+  $weight: 400,
+  $size: 1.3rem,
+  $height: 1.6,
+  $spacing: 0
+) {
+  color: $color;
+  font-family: $font;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+}
+
+@mixin title(
+  //   This is default styles
+  $color: var(--title-color),
+  $font: var(--font-family),
+  $weight: 700,
+  $size: 5.3rem,
+  $height: 100%,
+  $spacing: -3px
+) {
+  color: $color;
+  font-family: $font;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+}
+
+@mixin butt(
+  //   This is default styles
+  $color: var(--dark-button-color),
+  $background: var(--button-color),
+  $font: var(--font-family),
+  $weight: 500,
+  $size: 1.1rem,
+  $height: 1.22,
+  $spacing: 0,
+  $shadow: var(--button-shadow),
+  $radius: 5px,
+  $border: solid 2px var(--button-border-color),
+  $padding: 18px 44px,
+  $margin: 0,
+  $cursor: pointer
+) {
+  color: $color;
+  background: $background;
+  font-family: $font;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+
+  box-shadow: $shadow;
+  border-radius: $radius;
+  border: $border;
+
+  padding: $padding;
+  margin: $margin;
+
+  cursor: $cursor;
+}

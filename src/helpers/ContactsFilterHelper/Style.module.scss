@@ -1,0 +1,6 @@
+@use 'src/styles/mixins';
+
+.accent {
+  @include mixins.text();
+  background: none;
+}

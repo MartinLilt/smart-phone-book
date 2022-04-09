@@ -1,0 +1,64 @@
+@use 'styles/mixins';
+
+.header {
+  &_flex {
+    display: flex;
+    justify-content: center;
+
+    &::before {
+      content: '';
+      background: var(--main-bg-color);
+      height: inherit;
+      width: 100%;
+    }
+
+    &::after {
+      content: '';
+      background: var(--main-bg-color);
+      height: inherit;
+      width: 100%;
+    }
+  }
+
+  &_list {
+    @include mixins.default(
+      $border: null,
+      $background: null,
+      $list: none,
+      $padding: 0,
+      $margin: 0,
+      $cursor: pointer
+    );
+    display: flex;
+
+    & li {
+      display: flex;
+      justify-content: center;
+      background: var(--main-bg-color);
+      color: var(--opacity-dark-button-color);
+
+      &:hover,
+      :focus {
+        background: none;
+        color: var(--button-color);
+      }
+    }
+  }
+
+  &_button {
+    @include mixins.butt(
+      $color: inherit,
+      $background: none,
+      $weight: 400,
+      $size: 1rem,
+      $shadow: null,
+      $radius: null,
+      $border: none,
+      $padding: 10px 22px,
+      $margin: 0
+    );
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+}

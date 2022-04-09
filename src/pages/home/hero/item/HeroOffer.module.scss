@@ -1,0 +1,158 @@
+@use 'styles/mixins';
+
+ul {
+  @include mixins.default(
+    $border: null,
+    $background: null,
+    // $list: none,
+    // $padding: 0,
+    // $margin: 0,
+    $cursor: null
+  );
+}
+a {
+  text-decoration: none;
+}
+
+.offer {
+  &_flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_justify_content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_ul {
+    margin: 180px 0 0 0;
+  }
+
+  &_box {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    border-radius: 20px;
+  }
+
+  &_position {
+    position: relative;
+  }
+
+  &_list {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    transform: translateX(-50%);
+
+    & .offer_li:nth-child(2n) {
+      width: 320px;
+      display: flex;
+      margin: 0 40px;
+      filter: drop-shadow(0px 30px 10px rgba(0, 0, 0, 0.2));
+
+      &:hover {
+        filter: none;
+      }
+    }
+  }
+
+  &_li {
+    width: 280px;
+    filter: drop-shadow(0px 30px 10px rgba(0, 0, 0, 0.2));
+
+    &:hover {
+      filter: none;
+    }
+  }
+
+  &_button {
+    @include mixins.butt(
+      $color: var(--dark-button-color),
+      $background: var(--button-color),
+      $font: null,
+      $weight: null,
+      $size: null,
+      $height: null,
+      $spacing: null,
+      $shadow: null,
+      $radius: null,
+      $border: none,
+      $padding: 0
+    );
+
+    &:hover {
+      color: var(--button-color);
+      background: none;
+
+      // &::before {
+      //   content: 'Tutor me!';
+      //   @include mixins.text(
+      //     $color: var(--opacity-text-color),
+      //     $weight: 400,
+      //     $size: 1.1rem,
+      //     $height: 1.22,
+      //     $spacing: 0
+      //   );
+      // }
+    }
+
+    &_position {
+      margin: 395px 0 0 0;
+    }
+
+    width: 60px;
+    height: 60px;
+
+    &_icon {
+      width: 30px;
+      height: 30px;
+      // transform: translateY(2px);
+    }
+  }
+
+  &_social {
+    padding: 10px 0;
+  }
+
+  &_social_box {
+    margin: 200px 0 0 0;
+  }
+
+  &_link {
+    width: 22px;
+    height: 22px;
+    padding: 5px 22px 5px 0px;
+    margin: 0 20px 0 0;
+    color: var(--icon-color);
+
+    &:hover {
+      color: var(--opacity-icon-color);
+    }
+
+    &_icon {
+      width: inherit;
+      height: inherit;
+    }
+  }
+
+  &_store {
+    display: flex;
+    justify-content: center;
+    padding: 300px 0 0 0;
+
+    &_li {
+      width: 20%;
+      box-shadow: var(--button-shadow);
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+
+    &_li:first-child {
+      margin: 0 50px 0 0;
+    }
+  }
+}

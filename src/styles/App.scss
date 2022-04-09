@@ -1,0 +1,9 @@
+@import './mixins';
+
+body {
+  overflow: overlay;
+}
+
+.overflow {
+  overflow: hidden;
+}

@@ -1,0 +1,67 @@
+@use 'src/styles/mixins';
+
+.tutorial {
+  &_list {
+    display: flex;
+    background: var(--main-color);
+    border: 2px solid var(--build-color);
+    border-radius: 6px;
+    padding: 20px;
+
+    &:not(:first-child) {
+      margin: 10px 0 0 0;
+    }
+
+    &:nth-child(3n) {
+      opacity: 50%;
+      border: 2px solid var(--bulid-opacity-color);
+      padding: 10px 20px;
+    }
+  }
+
+  &_list_fix {
+    display: flex;
+    background: var(--main-color);
+    border: 2px solid var(--bulid-opacity-color);
+    border-radius: 6px;
+    padding: 20px;
+    opacity: 50%;
+
+    &:not(:first-child) {
+      margin: 10px 0 0 0;
+    }
+
+    &:nth-child(3n) {
+      opacity: 50%;
+      border: 2px solid var(--bulid-opacity-color);
+      padding: 10px 20px;
+    }
+  }
+
+  &_box_img {
+    margin: 0 10px 0 0;
+    display: flex;
+    border: 1px solid var(--main-color);
+
+    & img {
+      vertical-align: middle;
+      border-radius: 50%;
+    }
+  }
+
+  &_options {
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+  }
+
+  &_name {
+    @include mixins.text($weight: 700, $size: 1rem, $height: 1);
+    margin: 0;
+  }
+
+  &_number {
+    @include mixins.text($size: 0.8rem, $height: 1.5);
+    margin: 0;
+  }
+}

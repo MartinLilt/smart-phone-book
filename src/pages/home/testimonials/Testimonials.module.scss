@@ -1,0 +1,37 @@
+@use 'src/styles/mixins';
+
+.title {
+  @include mixins.typography(
+    $color: var(--build-color),
+    $weight: 800,
+    $size: 4.5rem,
+    $height: 1.5,
+    $spacing: normal
+  );
+  text-align: center;
+  margin: 0;
+  padding: 160px 0px 0px 0px;
+}
+
+.text {
+  @include mixins.typography(
+    $color: var(--bulid-opacity-color),
+    // $weight: 400,
+    $size: 1.2rem,
+    $height: 1.75,
+    // $spacing: 0
+  );
+  text-align: center;
+  width: 750px;
+  margin: 0 auto;
+  padding: 0 0 80px 0;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 16px;
+  max-width: calc(100vw - 48px);
+}

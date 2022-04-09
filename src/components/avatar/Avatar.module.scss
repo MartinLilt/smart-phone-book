@@ -1,0 +1,15 @@
+@use 'styles/mixins';
+
+.avatar {
+  @include mixins.text($spacing: null);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  color: var(--button-color);
+  background: var(--dark-button-color);
+  vertical-align: middle;
+  border-radius: 50%;
+  opacity: 15%;
+}

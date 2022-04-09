@@ -1,0 +1,62 @@
+@use 'src/styles/mixins';
+
+.modal {
+  &_overlay {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(9, 10, 17, 0.544);
+  }
+
+  &_container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  & {
+    margin: 10vh 0 0 0;
+    padding: 0 0 10vh 0;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: rgb(255, 255, 255);
+    filter: drop-shadow(0px 30px 10px rgba(0, 0, 0, 0.2));
+  }
+
+  &_exbox {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &_contentbox {
+    margin: 0 auto;
+  }
+
+  &_button {
+    @include mixins.button(
+      $cursor: pointer,
+      $padding: 10px,
+      $margin: 0,
+      $weight: null,
+      $color: none,
+      $list: null,
+      $radius: null,
+      $filter: null
+    );
+    display: flex;
+  }
+
+  &_icon {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    &_svg {
+      width: inherit;
+      height: inherit;
+    }
+  }
+}

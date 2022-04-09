@@ -1,0 +1,304 @@
+@use 'src/styles/mixins';
+
+.tutorial {
+  &_flex {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 180px 0 0 0;
+  }
+
+  &_box_flex {
+    display: flex;
+    justify-content: center;
+  }
+
+  &_box {
+    position: absolute;
+    width: 320px;
+    height: 650px;
+    filter: drop-shadow(60px 50px 20px rgba(0, 0, 0, 0.2));
+
+    &_fix {
+      position: absolute;
+      width: 320px;
+      height: 650px;
+      filter: none;
+    }
+  }
+
+  &_form {
+    flex-direction: column;
+    display: flex;
+    margin: 0 20px;
+
+    &_box {
+      transform: translateY(-540px);
+      display: flex;
+      flex-direction: column;
+      margin: 0 20px;
+    }
+
+    &_ava {
+      vertical-align: middle;
+      border-radius: 50%;
+    }
+
+    & input {
+      @include mixins.typography(
+        $color: var(--build-color),
+        $weight: 700,
+        // $size: 1rem,
+        // $height: 1.5,
+        $spacing: normal
+      );
+      border-radius: 6px;
+      border: 2px solid var(--input-color);
+      padding: 10px;
+      width: 100%;
+      box-sizing: border-box;
+
+      &::placeholder {
+        color: var(--input-color);
+      }
+    }
+
+    & label:nth-child(2n) {
+      margin: 0 0 20px 0;
+    }
+
+    & label {
+      margin: 0 0 10px 0;
+    }
+
+    & button {
+      @include mixins.button(
+        $border: 0,
+        $background: var(--build-color),
+        $list: null,
+        $padding: 9px 35px,
+        $margin: null,
+        $cursor: pointer,
+        $color: var(--main-color),
+        // $weight: 400,
+        $size: 1rem,
+        $height: 1.5,
+        $spacing: 1px,
+        $radius: 5px,
+        $filter: null
+      );
+    }
+  }
+
+  &_box_bg {
+    display: flex;
+    width: 530px;
+    height: 300px;
+    margin: 280px 0 0 0;
+    border-radius: 12px;
+    background: var(--accent-bg-color);
+
+    // & p {
+    //   @include mixins.typography(
+    //     $color: var(--build-color),
+    //     $weight: 700,
+    //     $size: 3rem,
+    //     $height: 0,
+    //     $spacing: normal
+    //   );
+    //   transform: rotateZ(270deg) translate(100px, -65px);
+    // }
+  }
+
+  &_content {
+    font-size: 30px;
+    padding: 0 80px 0 0;
+
+    &_box {
+      display: flex;
+    }
+
+    &_err {
+      @include mixins.typography(
+        $color: var(--accent-color),
+        $weight: 700,
+        $size: 1rem,
+        $height: 1.5,
+        $spacing: normal
+      );
+      margin: 0 0 0 auto;
+      border: 2px solid var(--accent-color);
+      border-radius: 0 5px 5px 0;
+      height: inherit;
+      align-items: center;
+      display: flex;
+      padding: 0 35px;
+    }
+  }
+
+  &_title {
+    @include mixins.title($size: 3.4rem, $spacing: 0);
+    margin: 30px 0;
+
+    & span {
+      color: var(--accent-color);
+    }
+  }
+
+  &_text {
+    @include mixins.text();
+    margin: 0 0 40px 0;
+  }
+
+  &_button {
+    @include mixins.butt($shadow: none);
+
+    &:hover {
+      color: var(--button-color);
+      box-shadow: var(--button-shadow);
+      background: var(--dark-button-color);
+    }
+  }
+
+  &_item {
+    margin: 0 20px;
+    padding: 0;
+  }
+
+  &_list {
+    display: flex;
+    background: var(--main-color);
+    border: 2px solid var(--build-color);
+    border-radius: 6px;
+    padding: 20px;
+    flex-direction: column;
+
+    &:not(:first-child) {
+      margin: 10px 0 0 0;
+      padding: 20px;
+    }
+
+    &_flex {
+      flex-direction: revert;
+      display: flex;
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &_list_fix {
+    display: flex;
+    background: var(--main-color);
+    border: 2px solid var(--bulid-opacity-color);
+    border-radius: 6px;
+    padding: 20px;
+    flex-direction: column;
+    opacity: 50%;
+
+    &:not(:first-child) {
+      margin: 10px 0 0 0;
+      padding: 20px;
+    }
+  }
+
+  &_box_img {
+    margin: 0 10px 0 0;
+    display: flex;
+    border: 1px solid var(--main-color);
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &_box_img_accent {
+    margin: 0 10px 0 0;
+    display: flex;
+    border: 1px solid var(--accent-color);
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &_img {
+    width: 100%;
+  }
+
+  &_options {
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+  }
+
+  &_name {
+    @include mixins.typography(
+      $color: var(--build-color),
+      $weight: 700,
+      // $size: 1rem,
+      $height: 1,
+      $spacing: normal
+    );
+    margin: 0;
+  }
+
+  &_name_accent {
+    @include mixins.typography(
+      $color: var(--main-color),
+      $weight: 700,
+      // $size: 1rem,
+      $height: 1,
+      $spacing: normal
+    );
+    margin: 0;
+  }
+
+  &_number {
+    @include mixins.typography(
+      $color: var(--bulid-opacity-color),
+      $weight: 700,
+      $size: 0.8rem,
+      // $height: 1.5,
+      $spacing: normal
+    );
+    margin: 0;
+  }
+
+  &_number_accent {
+    @include mixins.typography(
+      $color: var(--main-opacity-color),
+      $weight: 700,
+      $size: 0.8rem,
+      // $height: 1.5,
+      $spacing: normal
+    );
+    margin: 0;
+  }
+
+  &_xx p {
+    @include mixins.typography(
+      $color: var(--bulid-opacity-color),
+      $weight: 700,
+      $size: 0.8rem,
+      // $height: 1.5,
+      $spacing: normal
+    );
+    margin: 0;
+
+    & b {
+      color: var(--accent-color);
+      font-size: 1rem;
+    }
+  }
+
+  &_xx_accent p {
+    @include mixins.typography(
+      $color: var(--main-opacity-color),
+      $weight: 700,
+      $size: 0.8rem,
+      // $height: 1.5,
+      $spacing: normal
+    );
+    margin: 0;
+
+    & b {
+      color: var(--main-color);
+      font-size: 1rem;
+    }
+  }
+}

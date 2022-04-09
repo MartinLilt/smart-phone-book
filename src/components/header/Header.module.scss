@@ -1,0 +1,90 @@
+@use 'styles/mixins';
+
+.header {
+  &_background {
+    background-color: inherit;
+  }
+  &_container {
+    max-width: 1200px;
+    margin: 0px auto;
+  }
+  &_flex {
+    display: flex;
+  }
+
+  &_logo {
+    @include mixins.butt(
+      $color: var(--button-color),
+      $background: none,
+      $weight: 700,
+      $size: 2rem,
+      $height: 1.39,
+      $spacing: 0,
+      $shadow: null,
+      $radius: null,
+      $border: none,
+      $padding: 10px 0
+    );
+
+    &:hover {
+      color: var(--opacity-button-color);
+    }
+
+    &::after {
+      content: 'v1.0.0';
+      color: var(--opacity-button-color);
+      font-weight: 400;
+      font-size: 12px;
+      margin: 0 0 0 10px;
+    }
+  }
+
+  &_login {
+    margin: 0 0 0 auto;
+    align-items: center;
+    display: flex;
+  }
+
+  &_button {
+    @include mixins.butt(
+      $color: var(--opacity-button-color),
+      $background: none,
+      $weight: 400,
+      $spacing: null,
+      $shadow: null,
+      $radius: null,
+      $border: none,
+      $padding: 18px 0 18px 22px,
+      $margin: 0 22px 0 0
+    );
+    align-items: center;
+    display: flex;
+
+    &:first-child:hover,
+    :focus {
+      color: var(--button-color);
+    }
+
+    &:last-child {
+      color: var(--button-color);
+      padding-right: 0;
+      margin: 0;
+      font-weight: 800;
+
+      &:hover {
+        color: var(--opacity-button-color);
+      }
+    }
+  }
+
+  &_icon {
+    width: 18px;
+    height: 18px;
+    margin: 0 5px 0 0;
+
+    &_svg {
+      width: inherit;
+      height: inherit;
+    }
+  }
+}

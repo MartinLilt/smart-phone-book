@@ -1,0 +1,86 @@
+:root {
+  /* // Font stylesheets ==> */
+  /* // Color stylesheets ==> */
+  --main-color: #fafafa;
+  --build-color: #0a0a0a;
+  --accent-color: #2063ff;
+  --main-opacity-color: #fafafaba;
+  --bulid-opacity-color: #0a0a0a79;
+  --button-color: #001547;
+  --input-color: #0a0a0a3d;
+
+  --font-family: 'Inter', sans-serif;
+  --supp-font-family: 'Bebas Neue', cursive;
+
+  --button-shadow: 0px 100px 80px rgba(56, 56, 56, 0.1),
+    0px 64.8148px 46.8519px rgba(56, 56, 56, 0.0759259),
+    0px 38.5185px 25.4815px rgba(56, 56, 56, 0.0607407),
+    0px 20px 13px rgba(56, 56, 56, 0.05),
+    0px 8.14815px 6.51852px rgba(56, 56, 56, 0.0392593),
+    0px 1.85185px 3.14815px rgba(56, 56, 56, 0.0240741);
+  --elem-shadow: 0px 20px 50px rgba(49, 49, 49, 0.05);
+  --faq-shadow: 0px 20px 95px rgba(201, 203, 204, 0.3);
+
+  --accent-bg-color: linear-gradient(180deg, #1e5afa 0%, #8c1efa 100%);
+  --main-bg-color: #fafafa;
+  --opacity-accent-bg-color: linear-gradient(
+    180deg,
+    rgba(30, 90, 250, 0.1) 0%,
+    rgba(140, 30, 250, 0.1) 100%
+  );
+
+  --icon-color: #fafafa;
+  --opacity-icon-color: #fafafac7;
+  --dark-icon-color: #000f37;
+
+  --button-color: #fafafa;
+  --opacity-button-color: #fafafac7;
+  --dark-button-color: #000f37;
+  --opacity-dark-button-color: #000f3797;
+
+  --hero-title-color: #fafafa;
+  --title-color: #313131;
+  --supp-title-color: #000f37;
+  --opacity-title-color: #31313180;
+
+  --text-color: #575757;
+  --white-text-color: #fafafa;
+  --opacity-text-color: #fafafac7;
+
+  --elem-hover-color: #f8f8f8;
+  --neutral-hover-color: #f0f0f0;
+
+  --elem-border-color: #e7ebee;
+  --button-border-color: #000f37;
+  --accent-border-color: linear-gradient(180deg, #1e5afa 0%, #8c1efa 100%);
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  background: var(--main-color);
+  font-family: 'Bebas Neue', cursive;
+  font-family: 'Inter', sans-serif;
+}
+
+code {
+  font-family: 'Bebas Neue', cursive;
+  font-family: 'Inter', sans-serif;
+}

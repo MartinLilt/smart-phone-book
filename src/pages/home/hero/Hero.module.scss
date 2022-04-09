@@ -1,0 +1,49 @@
+@use 'styles/mixins';
+
+.hero {
+  &_container {
+    max-width: 1200px;
+    margin: 0px auto;
+    height: 100%;
+  }
+
+  & {
+    width: 1200px;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 110px;
+  }
+
+  &_box {
+    padding: 0 0 80px 0;
+  }
+
+  &_background {
+    background-color: inherit;
+    height: 800px;
+  }
+
+  &_title {
+    @include mixins.title(
+      $color: var(--hero-title-color),
+      $weight: 800,
+      $spacing: null
+    );
+    text-align: center;
+    margin: 0;
+    padding: 80px 0px 0px 0px;
+  }
+
+  &_text {
+    @include mixins.text(
+      $color: var(--opacity-text-color),
+      $size: 1.1rem,
+      $spacing: null
+    );
+    text-align: center;
+    width: 760px;
+    margin: 0 auto;
+    padding: 50px 0 0 0;
+  }
+}
