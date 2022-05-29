@@ -1,0 +1,52 @@
+@use 'src/styles/mixins';
+
+.flex {
+  display: flex;
+}
+
+.title {
+  @include mixins.title(
+    $color: var(--title-color),
+    $size: 2rem,
+    $height: 1.39,
+    $spacing: null
+  );
+
+  margin: 0 0 80px 0;
+}
+
+.text {
+  @include mixins.text(
+    $color: var(--text-color),
+    $size: 1.2rem,
+    $height: 1.19,
+    $spacing: null
+  );
+  margin: 0 0 30px 0;
+}
+
+.button {
+  @include mixins.butt($shadow: none);
+
+  &:hover {
+    color: var(--button-color);
+    box-shadow: var(--button-shadow);
+    background: var(--dark-button-color);
+  }
+
+  &:last-child {
+    @include mixins.butt(
+      $color: var(--dark-button-color),
+      $background: var(--button-color),
+      $weight: 700,
+      $shadow: null,
+      $radius: null,
+      $border: none
+    );
+
+    &:hover {
+      box-shadow: none;
+      color: var(--opacity-dark-button-color);
+    }
+  }
+}

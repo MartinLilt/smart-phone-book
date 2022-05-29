@@ -22,17 +22,17 @@ export default function TutorialItem({ placeholder, typeContact, typeNumber }) {
           <p
             className={
               placeholder === typeContact.current
-                ? s.tutorial_name
-                : s.tutorial_name_fix
+                ? 'item_cards_name'
+                : 'item_cards_number'
             }
           >
             {!filter ? name : FilterColorizer(name, filter)}
           </p>
           <p
             className={
-              placeholder !== typeNumber.current
-                ? s.tutorial_number
-                : s.tutorial_number_fix
+              placeholder === typeContact.current
+                ? 'item_cards_number'
+                : 'item_cards_name'
             }
           >
             {contact.number}

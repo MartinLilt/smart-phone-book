@@ -1,0 +1,52 @@
+@use 'src/styles/mixins';
+
+.flex {
+  display: flex;
+
+  align-items: center;
+  background: var(--accent-bg-color);
+  border-radius: 10px;
+  padding: 80px 100px;
+
+  & div {
+    flex-direction: column;
+    text-align: flex-start;
+  }
+}
+
+.title {
+  @include mixins.title(
+    $color: var(--hero-title-color),
+    $size: 3.4rem,
+    $height: 100%,
+    $spacing: 0
+  );
+
+  margin: 0 0 24px 0;
+}
+
+.text {
+  @include mixins.text(
+    $color: var(--white-text-color),
+    $size: 1.1rem,
+    $spacing: null
+  );
+
+  width: 600px;
+}
+
+.button {
+  @include mixins.butt(
+    $color: var(--button-color),
+    $background: none,
+    $shadow: null,
+    $border: solid 2px var(--elem-border-color),
+    $padding: 24px 72px,
+    $margin: 0 0 0 auto
+  );
+
+  &:hover {
+    color: var(--opacity-button-color);
+    border: solid 2px var(--opacity-button-color);
+  }
+}

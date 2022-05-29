@@ -7,32 +7,32 @@ export default function HeaderMenu() {
         <ul className={s.header_list}>
           <li>
             <button type="button" className={s.header_button}>
-              Virtual numbers
+              Tutor me
             </button>
           </li>
           <li>
             <button type="button" className={s.header_button}>
-              Toll free numbers
+              Our clients
             </button>
           </li>
           <li>
             <button type="button" className={s.header_button}>
-              Sip trunk
+              Testimonials
             </button>
           </li>
           <li>
             <button type="button" className={s.header_button}>
-              Phone systems
+              FAQ’s
             </button>
           </li>
           <li>
             <button type="button" className={s.header_button}>
-              Coverage
+              Download App
             </button>
           </li>
           <li>
             <button type="button" className={s.header_button}>
-              Pricing
+              Subscribe
             </button>
           </li>
         </ul>

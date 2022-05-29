@@ -1,0 +1,10 @@
+.title {
+  @include title();
+  padding: 0px 0px 50px 0px;
+
+  &_text {
+    @include text($color: var(--text-color), $size: 1.1rem, $spacing: null);
+    width: 750px;
+    padding: 0 0 80px 0;
+  }
+}

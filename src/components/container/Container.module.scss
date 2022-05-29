@@ -1,0 +1,11 @@
+.container {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 180px 0 0 0;
+
+  &_current {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 0;
+  }
+}

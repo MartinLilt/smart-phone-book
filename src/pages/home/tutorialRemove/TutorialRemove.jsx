@@ -66,8 +66,8 @@ export default function TutorialRemove() {
                         />
                       </span>
                       <span className={s.tutorial_options}>
-                        <p className={s.tutorial_name}>John M.</p>
-                        <p className={s.tutorial_number}>+14445552223</p>
+                        <p className="example_cards_name">John M.</p>
+                        <p className="example_cards_number">+14445552223</p>
                       </span>
                     </div>
                     <div className={s.tutorial_xx}>

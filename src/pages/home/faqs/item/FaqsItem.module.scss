@@ -1,0 +1,85 @@
+@use 'src/styles/mixins';
+
+p {
+  margin: 0;
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 676px;
+  padding: 35px;
+  cursor: pointer;
+  border-radius: 6px;
+  background: var(--dark-bg-color);
+  border: 2px solid var(--elem-border-color);
+
+  &_active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 676px;
+    padding: 35px;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: var(--elem-shadow);
+    background: var(--main-bg-color);
+    border: 2px solid var(--dark-bg-color);
+    font-weight: 700;
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+
+  &_active {
+    display: flex;
+    align-items: center;
+    margin: 0 0 30px 0;
+  }
+}
+
+.title {
+  @include mixins.text($weight: 500, $height: 1.3, $spacing: 0);
+
+  &_active {
+    @include mixins.text(
+      $color: var(--accent-text-color),
+      $weight: 500,
+      $height: 1.3,
+      $spacing: 0
+    );
+  }
+}
+
+.comment {
+  @include mixins.text($weight: 400, $size: 1.1rem, $height: 1.6, $spacing: 0);
+
+  &_active {
+    @include mixins.text(
+      $weight: 400,
+      $size: 1.1rem,
+      $height: 1.6,
+      $spacing: 0
+    );
+  }
+}
+
+.avatar {
+  margin: 0 1.5vh 0 0;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin: 0 30px 0 0;
+
+  &_active {
+    color: var(--accent-icon-color);
+    width: 30px;
+    height: 30px;
+    margin: 0 30px 0 0;
+  }
+}

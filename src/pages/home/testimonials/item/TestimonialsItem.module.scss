@@ -9,12 +9,19 @@ p {
   flex-direction: column;
   justify-content: space-between;
   width: 590px;
-  height: 320px;
+  height: 340px;
   padding: 50px;
   cursor: pointer;
   border-radius: 6px;
-  background: #fbfbfb;
-  box-shadow: inset 0px 0px 27px rgb(0 0 0 / 10%);
+  background: var(--dark-bg-color);
+  border: 2px solid var(--elem-border-color);
+
+  &:hover {
+    border: 2px solid var(--dark-bg-color);
+    background: var(--main-bg-color);
+    box-shadow: var(--elem-shadow);
+    font-weight: 700;
+  }
 }
 
 .flex {
@@ -23,37 +30,15 @@ p {
 }
 
 .comment {
-  @include mixins.typography(
-    $color: var(--bulid-color),
-    // $weight: 400,
-    $size: 1rem,
-    $height: 1.75,
-    // $spacing: 0
+  @include mixins.text(
+    $style: italic,
+    $weight: inherit,
+    $size: 1.1rem,
+    $height: 2,
+    $spacing: 0
   );
 }
 
 .avatar {
   margin: 0 1.5vh 0 0;
-}
-
-.name {
-  @include mixins.typography(
-    $color: var(--build-color),
-    $weight: 700,
-    // $size: 1rem,
-    $height: 1,
-    $spacing: normal
-  );
-  margin: 0;
-}
-
-.job {
-  @include mixins.typography(
-    $color: var(--bulid-opacity-color),
-    $weight: 700,
-    $size: 0.8rem,
-    // $height: 1.5,
-    $spacing: normal
-  );
-  margin: 0;
 }

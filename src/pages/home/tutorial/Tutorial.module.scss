@@ -1,14 +1,9 @@
 @use 'src/styles/mixins';
 
-.tutorial {
-  &_title {
-    @include mixins.title();
-    text-align: center;
-    margin: 0;
-    padding: 640px 0px 0px 0px;
-  }
+.container {
+  padding: 180px 0 0 0;
+}
 
-  &_title span {
-    opacity: 10%;
-  }
+.suptitle {
+  opacity: 10%;
 }

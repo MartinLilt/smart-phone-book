@@ -5,7 +5,7 @@ import ManImg from '../../../image/tutorImg/man_icon.jpg';
 
 import TutorialItem from './item/TutorAddItem';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact, resetContacts } from '../../../provider/redux/formSlice';
 import { nanoid } from '@reduxjs/toolkit';
@@ -19,6 +19,12 @@ export default function TutorialAdd() {
   const contacts = useSelector(Selector.getVisibleState);
   const onSubmit = (id, name, number) => dispatch(addContact(id, name, number));
   const onReset = () => dispatch(resetContacts());
+
+  useEffect(() => {
+    if (contacts.length < 2) {
+      if (isFull) setFull(false);
+    }
+  }, [contacts.length, isFull]);
 
   const onContactsReset = () => {
     if (contacts.length > 0) onReset();
@@ -115,8 +121,8 @@ export default function TutorialAdd() {
                         />
                       </span>
                       <span className={s.tutorial_options}>
-                        <p className={s.tutorial_name}>John M.</p>
-                        <p className={s.tutorial_number}>+14445552223</p>
+                        <p className="example_cards_name">John M.</p>
+                        <p className="example_cards_number">+14445552223</p>
                       </span>
                     </li>
                   )}

@@ -15,10 +15,10 @@ export default function TutorialItem({ options }) {
           <Avatar firstWord={contact.name} />
         </span>
         <span className={s.tutorial_options}>
-          <p className={s.tutorial_name}>
+          <p className="item_cards_name">
             {capitalizeFirstLetter(contact.name)}
           </p>
-          <p className={s.tutorial_number}>{contact.number}</p>
+          <p className="item_cards_number">{contact.number}</p>
         </span>
       </li>
     );

@@ -3,7 +3,6 @@ import s from './TutorialFilter.module.scss';
 import Iphone from '../../../image/iPhones/iphone_x3.png';
 import ManImg from '../../../image/tutorImg/man_icon.jpg';
 
-import Avatar from '@mui/material/Avatar';
 import TutorialItem from './item/TutorFilterItem';
 import { AiOutlineNumber } from 'react-icons/ai';
 import { RiAccountPinCircleFill } from 'react-icons/ri';
@@ -67,27 +66,23 @@ export default function TutorialFilter() {
               </form>
               <div className={s.tutorial_item}>
                 <ul>
-                  <li
-                    className={
-                      contacts.length < 2
-                        ? s.tutorial_list
-                        : s.tutorial_list_fix
-                    }
-                  >
-                    <span className={s.tutorial_box_img}>
-                      <img
-                        src={ManImg}
-                        alt="John's avatar"
-                        className={s.tutorial_form_ava}
-                        width="60px"
-                        height="60px"
-                      />
-                    </span>
-                    <span className={s.tutorial_options}>
-                      <p className={s.tutorial_name}>John M.</p>
-                      <p className={s.tutorial_number}>+14445552223</p>
-                    </span>
-                  </li>
+                  {contacts.length <= 3 && (
+                    <li className={s.tutorial_list}>
+                      <span className={s.tutorial_box_img}>
+                        <img
+                          src={ManImg}
+                          alt="John's avatar"
+                          className={s.tutorial_form_ava}
+                          width="60px"
+                          height="60px"
+                        />
+                      </span>
+                      <span className={s.tutorial_options}>
+                        <p className="example_cards_name">John M.</p>
+                        <p className="example_cards_number">+14445552223</p>
+                      </span>
+                    </li>
+                  )}
                   <TutorialItem
                     placeholder={placeholder}
                     typeContact={findContact}

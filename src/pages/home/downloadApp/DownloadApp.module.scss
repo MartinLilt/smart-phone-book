@@ -1,0 +1,31 @@
+@use 'styles/mixins';
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 45%;
+
+  & h4 {
+    margin: 0;
+    width: auto;
+    padding: 0 0 40px 0;
+  }
+
+  & p {
+    margin: 0;
+    width: auto;
+    padding: 0 0 60px 0;
+  }
+}
+
+.box {
+  width: 360px;
+  margin: 0 0 0 auto;
+  filter: drop-shadow(-60px 50px 20px rgba(0, 0, 0, 0.2));
+}

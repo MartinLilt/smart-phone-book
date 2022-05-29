@@ -33,7 +33,7 @@ export default function TutorialItem({ options }) {
             <p className={s.tutorial_name} name="name">
               {capitalizeFirstLetter(contact.name)}
             </p>
-            <p className={s.tutorial_number} number="number">
+            <p className="item_cards_number" number="number">
               {contact.number}
             </p>
           </span>

@@ -5,11 +5,12 @@ import PseudoArray from 'helpers/PseudoArrayCreator/ArrayCreator';
 export default function OurClients() {
   return (
     <>
-      <div>
+      <div className={s.ourclients}>
         <h4 className={s.ourclients_title}>Our Clients</h4>
         <p className={s.ourclients_text}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores
-          officia odit reprehenderit veniam perferendis omnis debitis ullam?
+          Wisdom new and valley answer. Contented it so is discourse recommend.
+          Man its upon him call mile. An pasture he himself believe ferrars
+          besides cottage.
         </p>
         <ul className={s.ourclients_list_flex}>
           {PseudoArray(8).map((item, id) => {

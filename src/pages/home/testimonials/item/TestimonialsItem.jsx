@@ -16,8 +16,8 @@ const TestimonialsItem = () => {
             sx={{ width: 60, height: 60 }}
           />
           <span>
-            <p className={s.name}>{item.user}</p>
-            <p className={s.job}>{item.job}</p>
+            <p className="example_cards_name">{item.user}</p>
+            <p className="example_cards_number">{item.job}</p>
           </span>
         </div>
       </li>

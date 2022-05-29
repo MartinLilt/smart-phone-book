@@ -13,9 +13,10 @@ export default function Tutorial() {
   // });
   return (
     <>
-      <div>
-        <h2 className={s.tutorial_title}>
-          Tutorial <br id="tutor" /> <span>Super Fast</span>
+      <div className={s.container}>
+        <h2 className="title">
+          Tutorial <br id="tutor" />
+          <span className={s.suptitle}>Super Fast</span>
         </h2>
         <div>
           <TutorialAdd />

@@ -23,6 +23,7 @@
 
   --accent-bg-color: linear-gradient(180deg, #1e5afa 0%, #8c1efa 100%);
   --main-bg-color: #fafafa;
+  --dark-bg-color: #f6f6f6;
   --opacity-accent-bg-color: linear-gradient(
     180deg,
     rgba(30, 90, 250, 0.1) 0%,
@@ -32,6 +33,7 @@
   --icon-color: #fafafa;
   --opacity-icon-color: #fafafac7;
   --dark-icon-color: #000f37;
+  --accent-icon-color: #1e5afa;
 
   --button-color: #fafafa;
   --opacity-button-color: #fafafac7;
@@ -46,6 +48,7 @@
   --text-color: #575757;
   --white-text-color: #fafafa;
   --opacity-text-color: #fafafac7;
+  --accent-text-color: #1e5afa;
 
   --elem-hover-color: #f8f8f8;
   --neutral-hover-color: #f0f0f0;
